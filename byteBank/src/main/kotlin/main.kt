@@ -1,4 +1,34 @@
 fun main(){
     println("Bem vindo ao ByteBank")
-    condicionais()
+    val conta = Conta()
+    conta.titular = "Vini"
+    println(conta.titular)
+}
+
+class Conta{
+    var titular = ""
+    var numero = 0
+    var saldo = 0.0
+}
+
+fun testaLaco(){
+    for (i in 1..5){
+        val titular = "Vinicius Miranda" //variável imutável
+        val numeroConta = 1000 + i
+        var saldo = 0.0 + i
+
+        println("Titular: $titular")
+        println("Numero da conta: $numeroConta")
+        println("Saldo: R$$saldo")
+        testaCondicao(saldo)
+    }
+
+}
+fun testaCondicao(saldo: Double){
+    when {
+        saldo > 0.0 -> println("Conta é positiva.")
+
+        saldo == 0.0 -> println("Conta é neutra.")
+        else -> println("Conta é negativa.")
+    }
 }
