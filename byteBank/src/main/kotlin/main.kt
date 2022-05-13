@@ -1,33 +1,35 @@
 fun main() {
     println("Bem vindo ao ByteBank")
-    val conta1 = Conta()
-    conta1.titular = "Vini"
-    conta1.saldo = 10.0
-    val conta2 = Conta()
+    val conta1 = Conta("Vini", 10)
+    conta1.depositar(10.0)
+    val conta2 = Conta("Kiss", 20)
     conta2.titular = "Kiss"
 
     println("TITULAR: " + conta1.titular)
+    println("NUMERO DA CONTA: " + conta1.numero)
     println("SALDO: R$" + conta1.saldo)
     conta1.depositar(50.0)
     println("SALDO: R$" + conta1.saldo)
     conta1.sacar(25.0)
     println("SALDO: R$" + conta1.saldo)
-    conta1.transferir(conta2,45.0)
+    conta1.transferir(conta2, 9.0)
     println("SALDO: R$" + conta1.saldo)
     println("SALDO: R$" + conta2.saldo)
 }
 
-class Conta {
-    var titular = ""
-    var numero = 0
+class Conta(
+    var titular: String,
+    var numero: Int
+) {
     var saldo = 0.0
+        private set
 
-    fun depositar(valor: Double){
+    fun depositar(valor: Double) {
         println("Deposito efetuado!")
         this.saldo += valor
     }
 
-    fun sacar(valor: Double){
+    fun sacar(valor: Double) {
         when {
             this.saldo <= valor -> println("Saldo insuficiente para saque!")
             else -> {
@@ -37,16 +39,17 @@ class Conta {
         }
     }
 
-    fun transferir(contaDestino: Conta, valor: Double){
-        if(saldo >= valor){
+    fun transferir(contaDestino: Conta, valor: Double) {
+        if (saldo >= valor) {
             this.saldo -= valor
-            contaDestino.saldo += valor
+            contaDestino.depositar(valor)
             println("Transferencia efetuada com sucesso!")
-        }
-        else{
-            println("aldo insuficiente para transferencia!")
+        } else {
+            println("saldo insuficiente para transferencia!")
         }
     }
+
+
 }
 
 fun testaLaco() {
