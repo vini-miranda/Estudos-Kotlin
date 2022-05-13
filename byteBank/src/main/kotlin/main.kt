@@ -3,7 +3,7 @@ fun main() {
     val conta1 = Conta("Vini", 10)
     conta1.depositar(10.0)
     val conta2 = Conta("Kiss", 20)
-    conta2.titular = "Kiss"
+
 
     println("TITULAR: " + conta1.titular)
     println("NUMERO DA CONTA: " + conta1.numero)
@@ -12,14 +12,14 @@ fun main() {
     println("SALDO: R$" + conta1.saldo)
     conta1.sacar(25.0)
     println("SALDO: R$" + conta1.saldo)
-    conta1.transferir(conta2, 9.0)
+    conta1.transferir(contaDestino = conta2, valor = 9.0)
     println("SALDO: R$" + conta1.saldo)
     println("SALDO: R$" + conta2.saldo)
 }
 
 class Conta(
-    var titular: String,
-    var numero: Int
+    val titular: String,
+    val numero: Int
 ) {
     var saldo = 0.0
         private set
