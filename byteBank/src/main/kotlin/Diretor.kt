@@ -6,8 +6,9 @@ class Diretor(
     var plr: Double
 ): Gerente(nome,cpf,salario,senha) {
 
-    override fun bonificacao(): Double{
-        return salario * 0.3
-    }
+    override val bonificacao: Double
+        get() {
+            return salario * 0.3
+        }
 
 }
