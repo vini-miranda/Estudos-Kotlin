@@ -5,7 +5,7 @@ open class Gerente(
     var senha: Int
 ): Funcionario(nome,cpf,salario) {
 
-    override val bonificacao: Double
+     override val bonificacao: Double
         get() {
             return salario * 0.2
         }
