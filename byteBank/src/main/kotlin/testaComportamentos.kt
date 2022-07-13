@@ -1,7 +1,7 @@
 fun testaComportamentos() {
-    val conta1 = Conta("Vini", 10)
+    val conta1 = ContaCorrente("Vini", 10)
     conta1.depositar(10.0)
-    val conta2 = Conta("Kiss", 20)
+    val conta2 = ContaPoupanca("Kiss", 20)
 
 
     println("TITULAR: " + conta1.titular)

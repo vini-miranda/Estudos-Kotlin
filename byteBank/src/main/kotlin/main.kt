@@ -1,7 +1,7 @@
 fun main() {
     println("Bem vindo ao ByteBank")
 
-    testaFuncionarios()
+    testaComportamentos()
 }
 
 fun linha(){
