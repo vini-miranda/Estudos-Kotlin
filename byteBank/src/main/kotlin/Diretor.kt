@@ -4,7 +4,7 @@ class Diretor(
     salario: Double,
     senha: Int,
     var plr: Double
-): Gerente(nome,cpf,salario,senha), Autenticavel {
+): FuncionarioAdmin(nome,cpf,salario,senha){
 
     override val bonificacao: Double
         get() {

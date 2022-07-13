@@ -4,7 +4,8 @@ fun testaAutenticacao() {
     val cliente = Cliente ("Renato", "357789654-12", 789)
 
     val sistema = SistemaInterno()
-    sistema.entra(vitor, 1234)
-    sistema.entra(rapha, 4321)
-    sistema.entra(cliente, 789)
+    sistema.entra(vitor, 124)
+    sistema.entra(rapha, 421)
+    sistema.entra(cliente, 7859)
+
 }
