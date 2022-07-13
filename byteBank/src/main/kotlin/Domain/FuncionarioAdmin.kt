@@ -1,3 +1,8 @@
+package Domain
+
+import Domain.Funcionario
+import Interface.Autenticavel
+
 abstract class FuncionarioAdmin(
     nome: String,
     cpf: String,

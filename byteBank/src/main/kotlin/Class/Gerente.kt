@@ -1,3 +1,7 @@
+package Class
+
+import Domain.FuncionarioAdmin
+
 open class Gerente(
     nome: String,
     cpf: String,

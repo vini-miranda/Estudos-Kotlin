@@ -1,3 +1,6 @@
+import Class.ContaCorrente
+import Class.ContaPoupanca
+
 fun testaComportamentos() {
     val conta1 = ContaCorrente("Vini", 10)
     conta1.depositar(10.0)

@@ -1,4 +1,8 @@
-class ContaPoupanca(
+package Class
+
+import Domain.Conta
+
+class ContaCorrente(
     titular: String,
     numero: Int
 ) : Conta(
@@ -6,11 +10,12 @@ class ContaPoupanca(
     numero
 ) {
     override fun sacar(valor: Double) {
+        val valorComTaxa = valor + 0.1
         when {
-            this.saldo <= valor -> println("Saldo insuficiente para saque!")
+            this.saldo <= valorComTaxa -> println("Saldo insuficiente para saque!")
             else -> {
                 println("Saque efetuado!")
-                saldo -= valor
+                saldo -= valorComTaxa
             }
         }
     }

@@ -1,3 +1,7 @@
+package Class
+
+import Interface.Autenticavel
+
 class SistemaInterno {
 
     fun entra(admin: Autenticavel, senha: Int){

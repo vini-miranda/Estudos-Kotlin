@@ -1,3 +1,9 @@
+import Class.Analista
+import Class.CalculaBonificacao
+import Class.Diretor
+import Class.Gerente
+import Domain.Funcionario
+
 fun testaFuncionarios() {
     val vini = Analista("Vini", "123456789-00", 1000.0)
     val vitor = Gerente("Vitor", "32546879-12", 2000.0, 1234)

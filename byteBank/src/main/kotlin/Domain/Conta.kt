@@ -1,3 +1,5 @@
+package Domain
+
 abstract class Conta(
     val titular: String,
     val numero: Int

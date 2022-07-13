@@ -1,3 +1,7 @@
+package Class
+
+import Domain.FuncionarioAdmin
+
 class Diretor(
     nome: String,
     cpf: String,

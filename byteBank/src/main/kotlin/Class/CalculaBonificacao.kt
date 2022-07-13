@@ -1,3 +1,7 @@
+package Class
+
+import Domain.Funcionario
+
 class CalculaBonificacao {
 
     var total: Double = 0.0

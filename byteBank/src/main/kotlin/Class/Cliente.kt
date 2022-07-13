@@ -1,3 +1,7 @@
+package Class
+
+import Interface.Autenticavel
+
 class Cliente(
     val nome: String,
     val cpf: String,
