@@ -2,18 +2,18 @@ open class Gerente(
     nome: String,
     cpf: String,
     salario: Double,
-    var senha: Int
-): Funcionario(nome,cpf,salario) {
+    senha: Int
+): FuncionarioAdmin(nome,cpf,salario,senha) {
 
      override val bonificacao: Double
         get() {
             return salario * 0.2
         }
 
-    fun autentica(senha:Int): String {
+    override fun autentica(senha:Int): Boolean {
         if (this.senha == senha){
-            return "Autenticado com sucesso"
+            return true
         }
-        return "Falha na autenticacao"
+        return false
     }
 }

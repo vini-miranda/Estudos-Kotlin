@@ -1,9 +1,8 @@
 fun main() {
-    println("Bem vindo ao ByteBank")
 
-    testaComportamentos()
+    testaAutenticacao()
+
 }
-
 fun linha(){
    println("=====================================================")
 }
