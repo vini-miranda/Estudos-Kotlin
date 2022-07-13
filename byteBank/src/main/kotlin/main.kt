@@ -1,7 +1,6 @@
 fun main() {
 
-    testaAutenticacao()
-
+   testaAutenticacao()
 }
 fun linha(){
    println("=====================================================")
