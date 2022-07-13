@@ -1,5 +1,5 @@
 fun testaFuncionarios() {
-    val vini = Funcionario("Vini", "123456789-00", 1000.0)
+    val vini = Analista("Vini", "123456789-00", 1000.0)
     val vitor = Gerente("Vitor", "32546879-12", 2000.0, 1234)
     val rapha = Diretor("Raphaela", "987654321-22", 3000.0, 4321, 200.0)
     val burilo = Analista("Murilo", "987456312-88", 3000.0)
