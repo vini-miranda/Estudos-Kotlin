@@ -1,6 +1,7 @@
 fun main() {
 
-   testaAutenticacao()
+   testaComportamentos()
+   testaContas()
 }
 fun linha(){
    println("=====================================================")

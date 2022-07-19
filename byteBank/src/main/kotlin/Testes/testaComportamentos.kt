@@ -1,13 +1,23 @@
+import Class.Cliente
 import Class.ContaCorrente
 import Class.ContaPoupanca
+import Class.Endereco
 
 fun testaComportamentos() {
-    val conta1 = ContaCorrente("Vini", 10)
+
+    val vini = Cliente("Vini", "123456789-00", senha = 1, endereco = Endereco(
+        logradouro = "Rua Albacora",
+        numero = 22
+    ))
+    val kiss = Cliente("Kiss","789456123-78", senha = 2)
+
+    val conta1 = ContaCorrente(vini, 10)
     conta1.depositar(10.0)
-    val conta2 = ContaPoupanca("Kiss", 20)
+    val conta2 = ContaPoupanca(kiss, 20)
 
 
-    println("TITULAR: " + conta1.titular)
+    println("TITULAR: " + conta1.titular.nome)
+    println("ENDEREÇO: ${vini.endereco.logradouro} ${vini.endereco.numero}")
     println("NUMERO DA CONTA: " + conta1.numero)
     println("SALDO: R$" + conta1.saldo)
     conta1.depositar(50.0)

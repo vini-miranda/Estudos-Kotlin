@@ -3,7 +3,7 @@ package Class
 import Domain.Conta
 
 class ContaCorrente(
-    titular: String,
+    titular: Cliente,
     numero: Int
 ) : Conta(
     titular,
