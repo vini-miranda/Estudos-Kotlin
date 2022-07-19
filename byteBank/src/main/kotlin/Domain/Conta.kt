@@ -8,6 +8,14 @@ abstract class Conta(
 ) {
     var saldo = 0.0
         protected set
+    companion object {
+        var totalContas = 0
+            private set
+    }
+
+    init {
+        totalContas++
+    }
 
     fun depositar(valor: Double) {
         println("Deposito efetuado!")
