@@ -7,8 +7,9 @@ class CalculaBonificacao {
     var total: Double = 0.0
         private set
 
-    fun somaBonificacao(list: MutableList<Funcionario>): Double{
+    fun somaBonificacao(list: MutableList<Any>): Double{
             list.forEach {
+                it as Funcionario
                 this.total += it.bonificacao
             }
             return total
