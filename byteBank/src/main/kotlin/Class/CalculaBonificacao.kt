@@ -9,9 +9,10 @@ class CalculaBonificacao {
 
     fun somaBonificacao(list: MutableList<Any>): Double{
             list.forEach {
-                it as Funcionario
-                this.total += it.bonificacao
-            }
+                if(it is Funcionario){
+                    this.total += it.bonificacao
+                }
+            } 
             return total
     }
 }

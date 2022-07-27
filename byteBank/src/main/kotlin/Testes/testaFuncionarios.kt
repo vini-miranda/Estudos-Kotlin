@@ -28,7 +28,7 @@ fun testaFuncionarios() {
     println("Bonificacao: R$${burilo.bonificacao}")
     linha()
 
-    val list: MutableList<Any> = mutableListOf(vini, vitor, rapha, burilo)
+    val list: MutableList<Any> = mutableListOf(vini, vitor, rapha, burilo, "ok")
     var soma = CalculaBonificacao().somaBonificacao(list)
 
     println("Total de bonificacao: R$$soma")
