@@ -3,7 +3,7 @@ import Class.Endereco
 
 fun main() {
 
-   testaFuncionarios()
+   testaContas()
 
 }
 fun linha(){

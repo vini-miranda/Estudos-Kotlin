@@ -14,12 +14,12 @@ fun testaContas() {
     contaCorrente.depositar(1000.0)
     contaPoupanca.depositar(1000.0)
 
-    println("Saldo Domain.Conta Corrente: R$${contaCorrente.saldo}")
-    println("Saldo Domain.Conta Poupança: R$${contaPoupanca.saldo}")
+    println("Saldo Conta Corrente: R$${contaCorrente.saldo}")
+    println("Saldo Conta Poupança: R$${contaPoupanca.saldo}")
 
-    contaCorrente.sacar(100.0)
-    contaPoupanca.sacar(100.0)
+    contaCorrente.sacar(900.0)
+    contaPoupanca.sacar(900.0)
 
-    println("Saldo Domain.Conta Corrente: R$${contaCorrente.saldo}")
-    println("Saldo Domain.Conta Poupança: R$${contaPoupanca.saldo}")
+    println("Saldo Conta Corrente: R$${contaCorrente.saldo}")
+    println("Saldo Conta Poupança: R$${contaPoupanca.saldo}")
 }

@@ -1,6 +1,7 @@
 package Class
 
 import Domain.Conta
+import exeception.SaldoInsuficienteException
 
 class ContaCorrente(
     titular: Cliente,
@@ -11,12 +12,10 @@ class ContaCorrente(
 ) {
     override fun sacar(valor: Double) {
         val valorComTaxa = valor + 0.1
-        when {
-            this.saldo <= valorComTaxa -> println("Saldo insuficiente para saque!")
-            else -> {
-                println("Saque efetuado!")
-                saldo -= valorComTaxa
-            }
+        if (valorComTaxa > saldo) {
+            throw SaldoInsuficienteException("Saldo insuficiente para saque!")
         }
+        println("Saque efetuado!")
+        saldo -= valorComTaxa
     }
 }

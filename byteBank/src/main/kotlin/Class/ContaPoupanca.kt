@@ -1,6 +1,7 @@
 package Class
 
 import Domain.Conta
+import exeception.SaldoInsuficienteException
 
 class ContaPoupanca(
     titular: Cliente,
@@ -10,12 +11,10 @@ class ContaPoupanca(
     numero
 ) {
     override fun sacar(valor: Double) {
-        when {
-            this.saldo <= valor -> println("Saldo insuficiente para saque!")
-            else -> {
-                println("Saque efetuado!")
-                saldo -= valor
-            }
+        if(valor > saldo){
+            throw SaldoInsuficienteException("Saldo insuficiente para saque!")
         }
+        println("Saque efetuado!")
+        saldo -= valor
     }
 }
