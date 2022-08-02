@@ -24,7 +24,11 @@ fun testaComportamentos() {
     println("SALDO: R$" + conta1.saldo)
     conta1.sacar(25.0)
     println("SALDO: R$" + conta1.saldo)
-    conta1.transferir(contaDestino = conta2, valor = 9.0)
+    conta1.transferir(contaDestino = conta2, valor = 9.0, senha = 1)
+    println("SALDO: R$" + conta1.saldo)
+    println("SALDO: R$" + conta2.saldo)
+
+    conta2.transferir(contaDestino = conta1, valor = 5.0, senha = 1)
     println("SALDO: R$" + conta1.saldo)
     println("SALDO: R$" + conta2.saldo)
 }

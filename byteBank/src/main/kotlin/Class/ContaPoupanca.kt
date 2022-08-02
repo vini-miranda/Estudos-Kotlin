@@ -12,7 +12,7 @@ class ContaPoupanca(
 ) {
     override fun sacar(valor: Double) {
         if(valor > saldo){
-            throw SaldoInsuficienteException("Saldo insuficiente para saque!")
+            throw SaldoInsuficienteException("Saldo insuficiente para saque! Saldo Atual: $saldo")
         }
         println("Saque efetuado!")
         saldo -= valor

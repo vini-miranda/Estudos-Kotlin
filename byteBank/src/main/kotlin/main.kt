@@ -1,10 +1,11 @@
 import Class.CalculaBonificacao
 import Class.Endereco
+import exeception.FalhaAutenticacaoException
+import exeception.SaldoInsuficienteException
 
 fun main() {
 
-   testaContas()
-
+   testaComportamentos()
 }
 fun linha(){
    println("=====================================================")
